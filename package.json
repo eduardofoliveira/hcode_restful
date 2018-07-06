@@ -13,6 +13,16 @@
   "author": "Eduardo F Oliveira",
   "license": "MIT",
   "dependencies": {
+    "consign": "^0.1.6",
     "express": "^4.16.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardofoliveira/hcode_restful.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eduardofoliveira/hcode_restful/issues"
+  },
+  "homepage": "https://github.com/eduardofoliveira/hcode_restful#readme"
 }

@@ -1,32 +1,10 @@
-const http = require('http')
+const express = require('express')
+const consign = require('consign')
 
-let server = http.createServer((req, res) => {
+let app = express()
 
-    console.log(`URL: ${req.url}`)
-    console.log(`Method: ${req.method}`)
+consign().include('routes').into(app)
 
-    switch(req.url){
-        case '/':
-        res.statusCode = 200
-        res.setHeader('Content-Type', 'text/html;charset=UTF-8')
-        res.end('<h1>Olá</h1>')
-        break
-
-        case '/users':
-        res.statusCode = 200
-        res.setHeader('Content-Type', 'text/json;charset=UTF-8')
-        res.end(JSON.stringify({
-            users: [{
-                name: 'Eduardo',
-                email: 'eduardo@cloudcom.com.br',
-                id: 1
-            }]
-        }))
-        break
-    }
-
-})
-
-server.listen(3000, '0.0.0.0', () => {
+app.listen(3000, '0.0.0.0', () => {
     console.log('Server is running...')
 })
