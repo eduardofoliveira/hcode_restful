@@ -13,6 +13,6 @@ consign()
     .include('utils')
     .into(app)
 
-app.listen(3000, '0.0.0.0', () => {
+app.listen(4000, '0.0.0.0', () => {
     console.log('Server is running...')
 })
