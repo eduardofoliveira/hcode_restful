@@ -1,8 +1,8 @@
 module.exports = {
     user: (app, req, res) => {
-        req.assert('name', 'O nome é obrigatório').notEmpty()
-        req.assert('email', 'O email está inválido').notEmpty().isEmail()
-        req.assert('password', 'A senha deve ter no mínimo 8 caracteres').isLength({ min: 8 })
+        req.assert('_name', 'O nome é obrigatório').notEmpty()
+        req.assert('_email', 'O email está inválido').notEmpty().isEmail()
+        req.assert('_password', 'A senha deve ter no mínimo 8 caracteres').isLength({ min: 8 })
 
         let errors = req.validationErrors()
 
